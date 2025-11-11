@@ -1,0 +1,201 @@
+:root {
+    --primary-color: salmon;
+    --secondary-color: #ffaa33;
+    --accent-color: #e8857a;
+    --light-color: #ecf0f1;
+    --success-color: #2ecc71;
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --header-bg: var(--secondary-color);
+    --footer-bg: var(--secondary-color);
+    --border-color: #dee2e6;
+    --input-bg: #ffffff;
+    --input-text: #333;
+    --muted-text: #6c757d;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #e9ecef;
+    --card-bg: #2d3748;
+    --header-bg: #1f2937;
+    --footer-bg: #1f2937;
+    --border-color: #4a5568;
+    --input-bg: #2d3748;
+    --input-text: #e9ecef;
+    --muted-text: #a0aec0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    background-color: var(--header-bg) !important;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: var(--light-color) !important;
+}
+
+.navbar-nav .nav-link {
+    color: var(--light-color) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--light-color);
+    padding: 30px 0;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+footer a {
+    color: var(--light-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s ease;
+    margin-bottom: 20px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+.course-card {
+    border-left: 4px solid var(--primary-color);
+}
+
+.lecture-card {
+    border-left: 4px solid var(--accent-color);
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.theme-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:hover .theme-icon {
+    transform: rotate(180deg);
+}
+
+.form-control {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-color: var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-select {
+    background-color: var(--input-bg);
+    color: var(--input-text);
+    border-color: var(--border-color);
+}
+
+.form-text {
+    color: var(--muted-text) !important;
+}
+
+.list-group-item {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: var(--input-bg);
+}
+
+.progress {
+    background-color: var(--input-bg);
+}
+
+.badge {
+    color: white;
+}
+
+.alert {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.alert-success {
+    border-left: 4px solid var(--success-color);
+}
+
+.alert-info {
+    border-left: 4px solid var(--primary-color);
+}
+
+.alert-warning {
+    border-left: 4px solid #f39c12;
+}
+
+.alert-danger {
+    border-left: 4px solid var(--accent-color);
+}
